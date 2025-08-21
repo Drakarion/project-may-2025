@@ -31,12 +31,13 @@
   ansible.builtin.copy:
     src: /tmp/prometheus-2.45.0.linux-amd64/{{ item }}
     dest: /usr/local/bin
+    mode: '0755'
     remote_src: yes
   loop:
     - prometheus
     - promtool
 
-  - name: Copy prometheus files
+- name: Copy prometheus files
   ansible.builtin.copy:
     src: /tmp/prometheus-2.45.0.linux-amd64/{{ item }}
     dest: /etc/prometheus
