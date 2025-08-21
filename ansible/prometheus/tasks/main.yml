@@ -56,4 +56,4 @@
   ansible.builtin.systemd:
     name: prometheus
     state: started
-    enable: yes
+    enabled: yes
