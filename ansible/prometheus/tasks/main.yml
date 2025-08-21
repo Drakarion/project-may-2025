@@ -50,4 +50,4 @@
 - name: Template a file
   ansible.builtin.template:
     src: prometheus/templates/prometheus.service.j2
-    dest: /etc/file.conf
+    dest: /etc/systemd/system/prometheus.service
